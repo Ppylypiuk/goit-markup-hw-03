@@ -7,12 +7,77 @@
   --text: #434455;
   --primary-brand: #4d5ae5;
   --pressed-state: #404bbf;
+  --cornflower: #e7e9fc;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
 }
 
 body {
   font-family: var(--primary-font);
   color: var(--text);
   background-color: var(--white);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0;
+  padding: 0 0;
+  border: 0;
+}
+
+p {
+  margin: 0 0;
+  padding: 0 0;
+  border: 0;
+}
+
+.container {
+  max-width: 1158px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+ul {
+  margin: 0 0;
+  padding: 0 0;
+  border: 0;
+}
+
+img {
+  display: block;
+}
+
+section {
+  padding: 120px auto 120px 0;
+}
+
+.hat {
+  display: flex;
+  align-items: baseline;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  gap: 322px;
+  border-bottom: 1px solid var(--cornflower);
+}
+
+.hat-unordered {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.hat-nav {
+  display: flex;
+  justify-content: flex-start;
+  gap: 76px;
 }
 
 .hat-logo {
@@ -53,6 +118,9 @@ body {
 }
 
 .hat-address {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
   font-style: normal;
 }
 
@@ -61,6 +129,19 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--text);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  margin: 188px 0;
+}
+
+.hero-title-box {
+  width: 496px;
+  height: 120px;
 }
 
 .hero-title {
@@ -80,6 +161,9 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
+  border-radius: 4px;
+  padding: 16px 32px;
+  border: none;
 }
 
 .hero-button:hover,
@@ -104,6 +188,16 @@ body {
   letter-spacing: 0.02em;
 }
 
+.advantages-unordered {
+  display: flex;
+  gap: 24px;
+  align-items: start;
+}
+
+.section {
+  padding: 0 0 120px 0;
+}
+
 .products-title {
   color: var(--dark);
   font-size: 36px;
@@ -111,9 +205,18 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
+  margin-top: 120px;
+  margin-bottom: 72px;
 }
 
-.team {
+.products-item {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 120px;
+}
+
+.section.team {
   background-color: var(--light-color);
 }
 
@@ -125,6 +228,8 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
+  margin-top: 120px;
+  margin-bottom: 72px;
 }
 
 .team-card {
@@ -139,6 +244,13 @@ body {
   letter-spacing: 0.02em;
 }
 
+.team-unordered {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 121px;
+}
+
 .team-card-text {
   font-size: 16px;
   line-height: 1.5;
@@ -149,6 +261,12 @@ body {
   background-color: var(--dark);
 }
 
+.container.foot {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .foot-logo {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -157,6 +275,7 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--primary-brand);
+  margin-top: 100px;
 }
 
 .foot-logo-studio {
@@ -164,10 +283,20 @@ body {
 }
 
 .foot-text {
+  width: 264px;
+  height: 72px;
   color: var(--light-color);
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  margin-bottom: 100px;
+}
+
+.portf-unor-button {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin: 168px 0 72px 0;
 }
 
 .sorting-button {
@@ -179,11 +308,21 @@ body {
   line-height: 1.5;
   font-family: var(--primary-font);
   letter-spacing: 0.04em;
+  border: 1px solid var(--cornflower);
+  border-radius: 4px;
+  padding: 12px 24px;
 }
 .sorting-button:hover,
 .sorting-button:focus {
   color: var(--white);
   background-color: var(--pressed-state);
+}
+
+.portf-card-unor {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 24px;
 }
 
 .portfolio-title {
@@ -192,6 +331,7 @@ body {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--dark);
+  margin: 32px auto 8px 16px;
 }
 
 .portfolio-text {
@@ -199,4 +339,10 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  margin: 0 auto 32px 16px;
+}
+
+.port-itm-desc {
+  border: 1px solid var(--cornflower);
+  border-top: 0;
 }
