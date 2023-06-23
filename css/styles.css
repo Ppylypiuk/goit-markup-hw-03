@@ -39,6 +39,12 @@ p {
   border: 0;
 }
 
+.hat-box {
+  display: flex;
+  align-items: baseline;
+  gap: 322px;
+}
+
 .container {
   max-width: 1158px;
   margin: 0 auto;
@@ -55,29 +61,20 @@ img {
   display: block;
 }
 
-section {
-  padding: 120px auto 120px 0;
+.hat {
+  border-bottom: 1px solid var(--cornflower);
 }
 
-.hat {
+.hat-nav {
   display: flex;
-  align-items: baseline;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  gap: 322px;
-  border-bottom: 1px solid var(--cornflower);
+  align-items: center;
 }
 
 .hat-unordered {
   display: flex;
   justify-content: center;
   gap: 40px;
-}
-
-.hat-nav {
-  display: flex;
-  justify-content: flex-start;
-  gap: 76px;
+  padding: 24px 0;
 }
 
 .hat-logo {
@@ -88,6 +85,7 @@ section {
   font-weight: 800;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-right: 76px;
 }
 
 .hat-logo-stud {
@@ -136,12 +134,7 @@ section {
   flex-direction: column;
   align-items: center;
   gap: 48px;
-  margin: 188px 0;
-}
-
-.hero-title-box {
-  width: 496px;
-  height: 120px;
+  padding: 188px 0;
 }
 
 .hero-title {
@@ -150,6 +143,7 @@ section {
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
+  max-width: 496px;
 }
 
 .hero-button {
@@ -162,8 +156,9 @@ section {
   line-height: 1.5;
   letter-spacing: 0.04em;
   border-radius: 4px;
-  padding: 16px 32px;
   border: none;
+  min-width: 169px;
+  padding: 16px 32px;
 }
 
 .hero-button:hover,
@@ -175,17 +170,21 @@ section {
   background-color: var(--dark);
 }
 
-.advantages-title {
-  color: var(--dark);
-  font-size: 20px;
-  line-height: 1.2;
-  font-weight: 500;
-  letter-spacing: 0.02em;
+.advantages {
+  padding: 120px 0;
 }
-.advantages-text {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .advantages-unordered {
@@ -194,8 +193,22 @@ section {
   align-items: start;
 }
 
-.section {
-  padding: 0 0 120px 0;
+.advantages-item {
+  width: calc((100% - 72px) / 4);
+}
+
+.advantages-title {
+  color: var(--dark);
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+.advantages-text {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 
 .products-title {
@@ -209,15 +222,20 @@ section {
   margin-bottom: 72px;
 }
 
-.products-item {
+.products-unordered {
   display: flex;
   justify-content: center;
   gap: 24px;
   margin-bottom: 120px;
 }
 
-.section.team {
+.products-item {
+  width: calc((100% - 48px) / 3);
+}
+
+.team {
   background-color: var(--light-color);
+  padding: 120px 0;
 }
 
 .team-title {
@@ -228,11 +246,21 @@ section {
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
-  margin-top: 120px;
   margin-bottom: 72px;
 }
 
+.team-unordered {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.team-sing {
+  padding: 32px 16px;
+}
+
 .team-card {
+  border-radius: 0px 0px 4px 4px;
   background-color: var(--white);
 }
 
@@ -242,22 +270,18 @@ section {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-}
-
-.team-unordered {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  margin-bottom: 121px;
+  text-align: center;
 }
 
 .team-card-text {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  text-align: center;
 }
 
 .foot {
+  padding: 100px 0;
   background-color: var(--dark);
 }
 
@@ -275,7 +299,8 @@ section {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--primary-brand);
-  margin-top: 100px;
+  display: inline-block;
+  margin-bottom: 16px;
 }
 
 .foot-logo-studio {
@@ -289,7 +314,11 @@ section {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  margin-bottom: 100px;
+}
+
+.portfolio {
+  padding: 96px 0 120px 0;
+  padding: 32px 16px;
 }
 
 .portf-unor-button {
@@ -316,13 +345,14 @@ section {
 .sorting-button:focus {
   color: var(--white);
   background-color: var(--pressed-state);
+  border: 1px solid transparent;
 }
 
 .portf-card-unor {
   display: flex;
   flex-wrap: wrap;
   align-content: center;
-  gap: 24px;
+  row-gap: 48px;
 }
 
 .portfolio-title {
@@ -331,7 +361,7 @@ section {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--dark);
-  margin: 32px auto 8px 16px;
+  margin: 0 auto 8px 16px;
 }
 
 .portfolio-text {
@@ -339,10 +369,11 @@ section {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  margin: 0 auto 32px 16px;
+  margin-left: 16px;
 }
 
 .port-itm-desc {
   border: 1px solid var(--cornflower);
   border-top: 0;
+  padding: 32px 0;
 }
