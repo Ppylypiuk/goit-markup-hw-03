@@ -74,6 +74,9 @@ img {
   display: flex;
   justify-content: center;
   gap: 40px;
+}
+
+.nav-item {
   padding: 24px 0;
 }
 
@@ -211,6 +214,10 @@ img {
   letter-spacing: 0.02em;
 }
 
+.products {
+  padding: 120px 0;
+}
+
 .products-title {
   color: var(--dark);
   font-size: 36px;
@@ -261,6 +268,7 @@ img {
 
 .team-card {
   border-radius: 0px 0px 4px 4px;
+  width: calc((100% - 72px) / 4);
   background-color: var(--white);
 }
 
@@ -271,6 +279,7 @@ img {
   line-height: 1.2;
   letter-spacing: 0.02em;
   text-align: center;
+  margin-bottom: 8px;
 }
 
 .team-card-text {
@@ -292,6 +301,7 @@ img {
 }
 
 .foot-logo {
+  display: inline-block;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -299,7 +309,6 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--primary-brand);
-  display: inline-block;
   margin-bottom: 16px;
 }
 
