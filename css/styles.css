@@ -216,7 +216,7 @@ img {
 }
 
 .products {
-  margin-bottom: 120px;
+  padding-bottom: 120px;
 }
 
 .products-title {
@@ -241,7 +241,7 @@ img {
 
 .team {
   background-color: var(--light-color);
-  padding: 120px 0 123px 0;
+  padding: 120px 0 120px 0;
 }
 
 .team-title {
@@ -324,8 +324,7 @@ img {
 }
 
 .portfolio {
-  margin-top: 96px;
-  margin-bottom: 120px;
+  padding: 96px 0 120px 0;
 }
 
 .portf-unor-button {
