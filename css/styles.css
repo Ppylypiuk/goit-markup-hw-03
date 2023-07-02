@@ -42,7 +42,7 @@ p {
 .hat-box {
   display: flex;
   align-items: baseline;
-  gap: 322px;
+  justify-content: space-between;
 }
 
 .container {
